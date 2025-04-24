@@ -6,126 +6,70 @@
   <title>Ιατρός Οφθαλμίατρος</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Greek&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Noto Sans Greek', sans-serif;
+    html, body {
+      height: 100%;
       margin: 0;
       padding: 0;
-      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+      font-family: 'Noto Sans Greek', sans-serif;
+    }
+    body {
+      background-image: url('https://images.unsplash.com/photo-1588776814546-ec7e358b2fd4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+      background-repeat: no-repeat;
       background-size: cover;
-      background-attachment: fixed;
       background-position: center;
       color: #333;
-      line-height: 1.6;
     }
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0.85);
-      z-index: -1;
+    .content {
+      background-color: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(6px);
+      min-height: 100%;
+      padding: 40px 20px;
+    }
+    header, section, footer {
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 960px;
     }
     header {
-      background: linear-gradient(to right, #0275d8, #025aa5);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      position: relative;
-    }
-    .lang-switch {
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      z-index: 10;
-    }
-    .lang-switch span {
-      font-size: 20px;
-      cursor: pointer;
-    }
-    nav {
       background-color: #ffffff;
-      border-bottom: 1px solid #ddd;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 15px 0;
-    }
-    nav a {
-      color: #0275d8;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 5px 10px;
-      border-radius: 6px;
-      transition: background-color 0.3s;
-    }
-    nav a:hover {
-      background-color: #e6f0fa;
+      text-align: center;
+      color: #025aa5;
     }
     section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
       background-color: #ffffff;
-      margin-top: 30px;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     }
-    section h2 {
-      color: #025aa5;
-      margin-bottom: 20px;
-    }
-    ul li {
-      margin-bottom: 10px;
-    }
-    footer {
-      background-color: #025aa5;
-      color: white;
+    nav {
       text-align: center;
-      padding: 20px;
-      margin-top: 60px;
+      margin: 20px 0;
     }
-    .about-image {
-      max-width: 100%;
-      border-radius: 12px;
-      margin-top: 20px;
-    }
-    .appointment-button {
-      display: inline-block;
-      background-color: #0275d8;
-      color: white;
-      padding: 12px 24px;
-      margin-top: 20px;
-      border-radius: 8px;
+    nav a {
+      margin: 0 10px;
+      color: #025aa5;
       text-decoration: none;
       font-weight: bold;
-      transition: background-color 0.3s ease;
     }
-    .appointment-button:hover {
-      background-color: #025aa5;
-    }
-    .social-icons {
-      margin-top: 20px;
-    }
-    .social-icons a {
-      margin-right: 10px;
-      display: inline-block;
-      width: 32px;
-      height: 32px;
-    }
-    .social-icons img {
-      width: 100%;
-      height: auto;
-      border-radius: 50%;
+    footer {
+      background-color: #ffffff;
+      text-align: center;
+      font-size: 14px;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <!-- Content remains the same -->
+  <div class="content">
+    <header>
+      <h1>Ιατρός Οφθαλμίατρος</h1>
+    </header>
+    <section>
+      <h2>Σχετικά με εμένα</h2>
+      <p>Εξειδικευμένος οφθαλμίατρος με εμπειρία σε σύγχρονες διαγνωστικές και θεραπευτικές τεχνικές. Στόχος μου είναι η διατήρηση και αποκατάσταση της όρασης των ασθενών μου.</p>
+    </section>
+    <footer>
+      &copy; 2025 Οφθαλμίατρος. Όλα τα δικαιώματα διατηρούνται.
+    </footer>
+  </div>
 </body>
 </html>
