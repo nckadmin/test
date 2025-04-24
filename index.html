@@ -3,68 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ιατρείο Οφθαλμιάτρου</title>
+  <title>Ιατρός Οφθαλμίατρος</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Greek&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Noto Sans Greek', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f8f9fa;
+      background-color: #f4f7fb;
       color: #333;
+      line-height: 1.6;
     }
     header {
-      background-color: #0275d8;
+      background: linear-gradient(to right, #0275d8, #025aa5);
       color: white;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .lang-switch {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
+    .lang-switch a {
+      color: #fff;
+      margin: 0 5px;
+      text-decoration: underline;
+      font-size: 14px;
     }
     nav {
-      background-color: #025aa5;
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
       display: flex;
       justify-content: center;
-      padding: 10px;
+      gap: 20px;
+      padding: 15px 0;
     }
     nav a {
-      color: white;
-      margin: 0 15px;
+      color: #0275d8;
       text-decoration: none;
       font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #e6f0fa;
     }
     section {
-      padding: 40px 20px;
+      padding: 60px 20px;
       max-width: 900px;
       margin: auto;
+      background-color: #ffffff;
+      margin-top: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    section h2 {
+      color: #025aa5;
+      margin-bottom: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
     }
     footer {
-      background-color: #0275d8;
+      background-color: #025aa5;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
+      margin-top: 60px;
+    }
+    .about-image {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Ιατρείο Οφθαλμιάτρου</h1>
-    <p>Υγεία και φροντίδα για τα μάτια σας</p>
+    <div class="lang-switch">
+      <a href="#" onclick="switchLanguage('el')">GR</a> |
+      <a href="#" onclick="switchLanguage('en')">EN</a>
+    </div>
+    <h1 id="title">Ιατρός Οφθαλμίατρος</h1>
+    <p id="subtitle">Υγεία και φροντίδα για τα μάτια σας</p>
   </header>
 
   <nav>
-    <a href="#home">Αρχική</a>
-    <a href="#services">Υπηρεσίες</a>
-    <a href="#about">Σχετικά με εμένα</a>
-    <a href="#contact">Επικοινωνία</a>
+    <a href="#home" id="nav-home">Αρχική</a>
+    <a href="#services" id="nav-services">Υπηρεσίες</a>
+    <a href="#about" id="nav-about">Σχετικά με εμένα</a>
+    <a href="#contact" id="nav-contact">Επικοινωνία</a>
   </nav>
 
   <section id="home">
-    <h2>Καλώς ήρθατε!</h2>
-    <p>Στο ιατρείο μας προσφέρουμε ολοκληρωμένες υπηρεσίες οφθαλμολογικής φροντίδας με έμφαση στην πρόληψη και τη σωστή διάγνωση.</p>
+    <h2 id="home-title">Καλώς ήρθατε!</h2>
+    <p id="home-desc">Παρέχω ολοκληρωμένες υπηρεσίες οφθαλμολογικής φροντίδας με έμφαση στην πρόληψη και την εξατομικευμένη διάγνωση.</p>
   </section>
 
   <section id="services">
-    <h2>Υπηρεσίες</h2>
-    <ul>
+    <h2 id="services-title">Υπηρεσίες</h2>
+    <ul id="services-list">
       <li>Οφθαλμολογική εξέταση</li>
       <li>Διάγνωση και θεραπεία παθήσεων των ματιών</li>
       <li>Μέτρηση οπτικής οξύτητας</li>
@@ -73,19 +114,65 @@
   </section>
 
   <section id="about">
-    <h2>Σχετικά με εμένα</h2>
-    <p>Η ιατρός Ελένη Παπαδοπούλου είναι εξειδικευμένη οφθαλμίατρος με πολυετή εμπειρία και διαρκή εκπαίδευση στον τομέα της υγείας των ματιών.</p>
+    <h2 id="about-title">Σχετικά με εμένα</h2>
+    <p id="about-text1">Η ιατρός Ελένη Παπαδοπούλου είναι εξειδικευμένη οφθαλμίατρος με πολυετή εμπειρία και διαρκή εκπαίδευση στον τομέα της υγείας των ματιών.</p>
+    <p id="about-text2">Προς το παρόν δεν διατηρεί φυσικό ιατρείο. Οι επισκέψεις και η επικοινωνία πραγματοποιούνται μόνο κατόπιν ραντεβού.</p>
+    <img src="images/DSC_0039.JPG" alt="Ιατρός" class="about-image">
   </section>
 
   <section id="contact">
-    <h2>Επικοινωνία</h2>
-    <p>Διεύθυνση: Οδός Υγείας 12, Αθήνα</p>
-    <p>Τηλέφωνο: +30 210 1234567</p>
-    <p>Email: info@ophthalmiatros.gr</p>
+    <h2 id="contact-title">Επικοινωνία</h2>
+    <p id="contact-phone">Τηλέφωνο: +30 210 1234567</p>
+    <p id="contact-email">Email: info@ophthalmiatros.gr</p>
+    <p id="contact-desc">Επικοινωνήστε μαζί μου για να κλείσουμε ραντεβού ή να λύσουμε οποιαδήποτε απορία σας.</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Ιατρείο Οφθαλμιάτρου. Όλα τα δικαιώματα διατηρούνται.</p>
+    <p>&copy; 2025 Ιατρός Οφθαλμίατρος. Όλα τα δικαιώματα διατηρούνται.</p>
   </footer>
+
+  <script>
+    const translations = {
+      en: {
+        title: "Ophthalmologist",
+        subtitle: "Eye health and care",
+        'nav-home': "Home",
+        'nav-services': "Services",
+        'nav-about': "About Me",
+        'nav-contact': "Contact",
+        'home-title': "Welcome!",
+        'home-desc': "I provide complete ophthalmic care services with emphasis on prevention and personalized diagnosis.",
+        'services-title': "Services",
+        'services-list': [
+          "Eye examination",
+          "Diagnosis and treatment of eye diseases",
+          "Visual acuity measurement",
+          "Prescription of glasses"
+        ],
+        'about-title': "About Me",
+        'about-text1': "Dr. Eleni Papadopoulou is a specialized ophthalmologist with many years of experience and continuous education in eye health.",
+        'about-text2': "Currently, she does not maintain a physical office. Visits and communication are by appointment only.",
+        'contact-title': "Contact",
+        'contact-phone': "Phone: +30 210 1234567",
+        'contact-email': "Email: info@ophthalmiatros.gr",
+        'contact-desc': "Contact me to schedule an appointment or to answer any questions you may have."
+      }
+    };
+
+    function switchLanguage(lang) {
+      if (translations[lang]) {
+        for (const id in translations[lang]) {
+          const el = document.getElementById(id);
+          if (el) {
+            if (Array.isArray(translations[lang][id])) {
+              el.innerHTML = translations[lang][id].map(item => `<li>${item}</li>`).join('');
+            } else {
+              el.innerHTML = translations[lang][id];
+            }
+          }
+        }
+      }
+    }
+  </script>
 </body>
 </html>
