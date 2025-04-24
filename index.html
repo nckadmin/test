@@ -20,17 +20,24 @@
       padding: 40px 20px;
       text-align: center;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: relative;
     }
     .lang-switch {
       position: absolute;
       top: 10px;
       right: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
     .lang-switch a {
-      color: #fff;
-      margin: 0 5px;
-      text-decoration: underline;
-      font-size: 14px;
+      text-decoration: none;
+    }
+    .lang-switch img {
+      width: 24px;
+      height: 16px;
+      cursor: pointer;
+      border: 1px solid white;
     }
     nav {
       background-color: #ffffff;
@@ -84,8 +91,8 @@
 <body>
   <header>
     <div class="lang-switch">
-      <a href="#" onclick="switchLanguage('el')">GR</a> |
-      <a href="#" onclick="switchLanguage('en')">EN</a>
+      <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="switchLanguage('en')">
+      <img src="https://flagcdn.com/w40/gr.png" alt="Ελληνικά" onclick="switchLanguage('el')">
     </div>
     <h1 id="title">Ιατρός Οφθαλμίατρος</h1>
     <p id="subtitle">Υγεία και φροντίδα για τα μάτια σας</p>
@@ -117,6 +124,7 @@
     <h2 id="about-title">Σχετικά με εμένα</h2>
     <p id="about-text1">Η ιατρός Ελένη Παπαδοπούλου είναι εξειδικευμένη οφθαλμίατρος με πολυετή εμπειρία και διαρκή εκπαίδευση στον τομέα της υγείας των ματιών.</p>
     <p id="about-text2">Προς το παρόν δεν διατηρεί φυσικό ιατρείο. Οι επισκέψεις και η επικοινωνία πραγματοποιούνται μόνο κατόπιν ραντεβού.</p>
+    <img src="https://your-image-url-here.jpg" alt="Doctor" class="about-image">
   </section>
 
   <section id="contact">
